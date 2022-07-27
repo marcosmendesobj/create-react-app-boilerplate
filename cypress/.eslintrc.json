@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:cypress/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/triple-slash-reference": "off"
+  },
+  "env": { "cypress/globals": true }
+}
