@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 
 import { scrollToTop } from 'utils/window/scroll'
 
-import { Home } from 'pages'
+import { Home, Users } from 'pages'
 
 export default function MainRoutes() {
   const { pathname } = useLocation()
@@ -13,6 +13,8 @@ export default function MainRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/users" element={<Users />} />
+
       <Route path="*" element={<h1>Not Found...</h1>} />
     </Routes>
   )
