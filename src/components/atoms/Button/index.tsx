@@ -1,5 +1,8 @@
 import { Button as ChakraButton, Text } from '@chakra-ui/react'
-import { ButtonProps } from './types'
+
+type ButtonProps = {
+  title: string
+}
 
 const Button = ({ title }: ButtonProps) => (
   <ChakraButton bg="blue" w={20} h={20} borderRadius={10}>

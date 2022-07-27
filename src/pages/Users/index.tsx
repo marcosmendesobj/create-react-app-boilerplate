@@ -1,5 +1,6 @@
 import { Flex, Heading, List, ListItem } from '@chakra-ui/react'
-import { usersActions } from 'store/ducks/users/actions'
+import { usersActions } from 'store/ducks/users'
+
 import { RootState, useAppDispatch, useAppSelector } from 'store'
 
 const Users = () => {

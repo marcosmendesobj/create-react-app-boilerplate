@@ -1,8 +1,7 @@
 import * as api from 'services/api'
 import { all, call, put, takeEvery } from 'redux-saga/effects'
 
-import { usersActions } from './actions'
-import { ResponseUsersProps, UserActionTypes } from './types'
+import { ResponseUsersProps, usersActions } from '.'
 
 function* getUsers() {
   try {
@@ -15,4 +14,4 @@ function* getUsers() {
   }
 }
 
-export default all([takeEvery(UserActionTypes.GET_USERS, getUsers)])
+export default all([takeEvery('SAGAS_GET_USERS', getUsers)])

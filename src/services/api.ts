@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { User } from 'store/ducks/users'
 
 /**
  * define your base url here
@@ -8,4 +9,4 @@ import axios from 'axios'
  */
 
 export const getUsers = async () =>
-  await axios.get('https://jsonplaceholder.typicode.com/users')
+  await axios.get<User[]>('https://jsonplaceholder.typicode.com/users')
