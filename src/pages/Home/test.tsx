@@ -1,10 +1,11 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { renderAll } from 'utils/tests/renderAll'
 
 import Home from '.'
 
 describe('<Home />', () => {
   it('should render correctly', () => {
-    render(<Home />)
+    renderAll(<Home />)
 
     const logo = screen.getByRole('img', {
       name: /logo/i
