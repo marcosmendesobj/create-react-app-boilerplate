@@ -1,4 +1,4 @@
-import { Flex, Heading } from '@chakra-ui/react'
+import { Flex, Heading, List, ListItem } from '@chakra-ui/react'
 import { usersActions } from 'store/ducks/users/actions'
 import { RootState, useAppDispatch, useAppSelector } from 'store'
 
@@ -9,14 +9,23 @@ const Users = () => {
   dispatch(usersActions.getAll())
 
   return (
-    <Flex>
-      <Heading>Lista de Usuarios</Heading>
+    <Flex
+      bg="bgPrimary"
+      color="white"
+      minH="100vh"
+      flexDir="column"
+      alignItems="center"
+      justifyContent="center"
+      gap="2rem"
+      textAlign="center"
+    >
+      <Heading fontSize="4rem">Lista de Usuarios</Heading>
 
-      <ul>
+      <List fontSize="2rem">
         {users.map((user, index) => (
-          <li key={index}>{user.name}</li>
+          <ListItem key={index}>{user.name}</ListItem>
         ))}
-      </ul>
+      </List>
     </Flex>
   )
 }
