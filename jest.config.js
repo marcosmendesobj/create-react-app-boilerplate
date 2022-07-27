@@ -5,6 +5,8 @@ module.exports = {
   collectCoverageFrom: [
     'src/components/atoms/**/*.ts(x)?',
     'src/components/organisms/**/*.ts(x)?',
+    'src/pages/**/*.ts(x)?',
+    '!src/pages/index.ts',
     '!src/**/**/**/*.d.ts'
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setupTests.ts'],

@@ -6,7 +6,7 @@ const theme = extendTheme({
     body: 'Source Sans Pro, sans-serif'
   },
   colors: {
-    white: '#fafafa',
+    bgPrimary: '#282c34',
     black: '#000000'
   },
   styles: {
